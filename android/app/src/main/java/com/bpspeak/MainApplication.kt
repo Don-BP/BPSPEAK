@@ -1,6 +1,10 @@
+// MainApplication.kt
+
 package com.bpspeak
 
 import android.app.Application
+// 1. REMOVE this import statement
+// import com.wenkesj.voice.VoicePackage 
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactHost
@@ -18,6 +22,7 @@ class MainApplication : Application(), ReactApplication {
             PackageList(this).packages.apply {
               // Packages that cannot be autolinked yet can be added manually here, for example:
               // add(MyReactNativePackage())
+              // 2. The line "add(VoicePackage())" should be REMOVED from here.
             }
 
         override fun getJSMainModuleName(): String = "index"
